@@ -1,0 +1,700 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F05726FF0D0EA089529A1ED /* Pods_MusGal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001BED64D607C26DBFAD010 /* Pods_MusGal.framework */; };
+		AE8FAED92707592000F9DF1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8FAED82707592000F9DF1D /* AppDelegate.swift */; };
+		AE8FAEDB2707592000F9DF1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8FAEDA2707592000F9DF1D /* SceneDelegate.swift */; };
+		AE8FAEDD2707592000F9DF1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8FAEDC2707592000F9DF1D /* ViewController.swift */; };
+		AE8FAEE02707592000F9DF1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8FAEDE2707592000F9DF1D /* Main.storyboard */; };
+		AE8FAEE22707592200F9DF1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE8FAEE12707592200F9DF1D /* Assets.xcassets */; };
+		AE8FAEE52707592200F9DF1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8FAEE32707592200F9DF1D /* LaunchScreen.storyboard */; };
+		AE8FAEF02707592200F9DF1D /* MusGalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8FAEEF2707592200F9DF1D /* MusGalTests.swift */; };
+		AE8FAEFA2707592200F9DF1D /* MusGalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8FAEF92707592200F9DF1D /* MusGalUITests.swift */; };
+		AE8FAEFC2707592200F9DF1D /* MusGalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8FAEFB2707592200F9DF1D /* MusGalUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE8FAEEC2707592200F9DF1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE8FAECD2707592000F9DF1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE8FAED42707592000F9DF1D;
+			remoteInfo = MusGal;
+		};
+		AE8FAEF62707592200F9DF1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE8FAECD2707592000F9DF1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE8FAED42707592000F9DF1D;
+			remoteInfo = MusGal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3530CDC7364F69E4E36E6E1D /* Pods-MusGal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusGal.release.xcconfig"; path = "Target Support Files/Pods-MusGal/Pods-MusGal.release.xcconfig"; sourceTree = "<group>"; };
+		AE8FAED52707592000F9DF1D /* MusGal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusGal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE8FAED82707592000F9DF1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE8FAEDA2707592000F9DF1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AE8FAEDC2707592000F9DF1D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE8FAEDF2707592000F9DF1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE8FAEE12707592200F9DF1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE8FAEE42707592200F9DF1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE8FAEE62707592200F9DF1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE8FAEEB2707592200F9DF1D /* MusGalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusGalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE8FAEEF2707592200F9DF1D /* MusGalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusGalTests.swift; sourceTree = "<group>"; };
+		AE8FAEF52707592200F9DF1D /* MusGalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusGalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE8FAEF92707592200F9DF1D /* MusGalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusGalUITests.swift; sourceTree = "<group>"; };
+		AE8FAEFB2707592200F9DF1D /* MusGalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusGalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D001BED64D607C26DBFAD010 /* Pods_MusGal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusGal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFE93A2B4BCCDC1D409F7FD8 /* Pods-MusGal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusGal.debug.xcconfig"; path = "Target Support Files/Pods-MusGal/Pods-MusGal.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE8FAED22707592000F9DF1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F05726FF0D0EA089529A1ED /* Pods_MusGal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE8FAEE82707592200F9DF1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE8FAEF22707592200F9DF1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34AE494A3ED445B2DD735EB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D001BED64D607C26DBFAD010 /* Pods_MusGal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		842D0D8576EE8FB77C05AB0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFE93A2B4BCCDC1D409F7FD8 /* Pods-MusGal.debug.xcconfig */,
+				3530CDC7364F69E4E36E6E1D /* Pods-MusGal.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AE8FAECC2707592000F9DF1D = {
+			isa = PBXGroup;
+			children = (
+				AE8FAED72707592000F9DF1D /* MusGal */,
+				AE8FAEEE2707592200F9DF1D /* MusGalTests */,
+				AE8FAEF82707592200F9DF1D /* MusGalUITests */,
+				AE8FAED62707592000F9DF1D /* Products */,
+				842D0D8576EE8FB77C05AB0A /* Pods */,
+				34AE494A3ED445B2DD735EB8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AE8FAED62707592000F9DF1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE8FAED52707592000F9DF1D /* MusGal.app */,
+				AE8FAEEB2707592200F9DF1D /* MusGalTests.xctest */,
+				AE8FAEF52707592200F9DF1D /* MusGalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE8FAED72707592000F9DF1D /* MusGal */ = {
+			isa = PBXGroup;
+			children = (
+				AE8FAED82707592000F9DF1D /* AppDelegate.swift */,
+				AE8FAEDA2707592000F9DF1D /* SceneDelegate.swift */,
+				AE8FAEDC2707592000F9DF1D /* ViewController.swift */,
+				AE8FAEDE2707592000F9DF1D /* Main.storyboard */,
+				AE8FAEE12707592200F9DF1D /* Assets.xcassets */,
+				AE8FAEE32707592200F9DF1D /* LaunchScreen.storyboard */,
+				AE8FAEE62707592200F9DF1D /* Info.plist */,
+			);
+			path = MusGal;
+			sourceTree = "<group>";
+		};
+		AE8FAEEE2707592200F9DF1D /* MusGalTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE8FAEEF2707592200F9DF1D /* MusGalTests.swift */,
+			);
+			path = MusGalTests;
+			sourceTree = "<group>";
+		};
+		AE8FAEF82707592200F9DF1D /* MusGalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AE8FAEF92707592200F9DF1D /* MusGalUITests.swift */,
+				AE8FAEFB2707592200F9DF1D /* MusGalUITestsLaunchTests.swift */,
+			);
+			path = MusGalUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE8FAED42707592000F9DF1D /* MusGal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE8FAEFF2707592200F9DF1D /* Build configuration list for PBXNativeTarget "MusGal" */;
+			buildPhases = (
+				EF06932D1A2BCB6FB8F4E481 /* [CP] Check Pods Manifest.lock */,
+				AE8FAED12707592000F9DF1D /* Sources */,
+				AE8FAED22707592000F9DF1D /* Frameworks */,
+				AE8FAED32707592000F9DF1D /* Resources */,
+				8CE4BF5B32826C73E9CAB3F9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusGal;
+			productName = MusGal;
+			productReference = AE8FAED52707592000F9DF1D /* MusGal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE8FAEEA2707592200F9DF1D /* MusGalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE8FAF022707592200F9DF1D /* Build configuration list for PBXNativeTarget "MusGalTests" */;
+			buildPhases = (
+				AE8FAEE72707592200F9DF1D /* Sources */,
+				AE8FAEE82707592200F9DF1D /* Frameworks */,
+				AE8FAEE92707592200F9DF1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE8FAEED2707592200F9DF1D /* PBXTargetDependency */,
+			);
+			name = MusGalTests;
+			productName = MusGalTests;
+			productReference = AE8FAEEB2707592200F9DF1D /* MusGalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AE8FAEF42707592200F9DF1D /* MusGalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE8FAF052707592200F9DF1D /* Build configuration list for PBXNativeTarget "MusGalUITests" */;
+			buildPhases = (
+				AE8FAEF12707592200F9DF1D /* Sources */,
+				AE8FAEF22707592200F9DF1D /* Frameworks */,
+				AE8FAEF32707592200F9DF1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE8FAEF72707592200F9DF1D /* PBXTargetDependency */,
+			);
+			name = MusGalUITests;
+			productName = MusGalUITests;
+			productReference = AE8FAEF52707592200F9DF1D /* MusGalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE8FAECD2707592000F9DF1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					AE8FAED42707592000F9DF1D = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					AE8FAEEA2707592200F9DF1D = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = AE8FAED42707592000F9DF1D;
+					};
+					AE8FAEF42707592200F9DF1D = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = AE8FAED42707592000F9DF1D;
+					};
+				};
+			};
+			buildConfigurationList = AE8FAED02707592000F9DF1D /* Build configuration list for PBXProject "MusGal" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE8FAECC2707592000F9DF1D;
+			productRefGroup = AE8FAED62707592000F9DF1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE8FAED42707592000F9DF1D /* MusGal */,
+				AE8FAEEA2707592200F9DF1D /* MusGalTests */,
+				AE8FAEF42707592200F9DF1D /* MusGalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE8FAED32707592000F9DF1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE8FAEE52707592200F9DF1D /* LaunchScreen.storyboard in Resources */,
+				AE8FAEE22707592200F9DF1D /* Assets.xcassets in Resources */,
+				AE8FAEE02707592000F9DF1D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE8FAEE92707592200F9DF1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE8FAEF32707592200F9DF1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8CE4BF5B32826C73E9CAB3F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MusGal/Pods-MusGal-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MusGal/Pods-MusGal-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MusGal/Pods-MusGal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF06932D1A2BCB6FB8F4E481 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MusGal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE8FAED12707592000F9DF1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE8FAEDD2707592000F9DF1D /* ViewController.swift in Sources */,
+				AE8FAED92707592000F9DF1D /* AppDelegate.swift in Sources */,
+				AE8FAEDB2707592000F9DF1D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE8FAEE72707592200F9DF1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE8FAEF02707592200F9DF1D /* MusGalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE8FAEF12707592200F9DF1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE8FAEFA2707592200F9DF1D /* MusGalUITests.swift in Sources */,
+				AE8FAEFC2707592200F9DF1D /* MusGalUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE8FAEED2707592200F9DF1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE8FAED42707592000F9DF1D /* MusGal */;
+			targetProxy = AE8FAEEC2707592200F9DF1D /* PBXContainerItemProxy */;
+		};
+		AE8FAEF72707592200F9DF1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE8FAED42707592000F9DF1D /* MusGal */;
+			targetProxy = AE8FAEF62707592200F9DF1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AE8FAEDE2707592000F9DF1D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE8FAEDF2707592000F9DF1D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE8FAEE32707592200F9DF1D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE8FAEE42707592200F9DF1D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE8FAEFD2707592200F9DF1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE8FAEFE2707592200F9DF1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE8FAF002707592200F9DF1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFE93A2B4BCCDC1D409F7FD8 /* Pods-MusGal.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C9QBDKULF9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MusGal/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fi.MusGal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE8FAF012707592200F9DF1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3530CDC7364F69E4E36E6E1D /* Pods-MusGal.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C9QBDKULF9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MusGal/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fi.MusGal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AE8FAF032707592200F9DF1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C9QBDKULF9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fi.MusGalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusGal.app/MusGal";
+			};
+			name = Debug;
+		};
+		AE8FAF042707592200F9DF1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C9QBDKULF9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fi.MusGalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusGal.app/MusGal";
+			};
+			name = Release;
+		};
+		AE8FAF062707592200F9DF1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C9QBDKULF9;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fi.MusGalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MusGal;
+			};
+			name = Debug;
+		};
+		AE8FAF072707592200F9DF1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C9QBDKULF9;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fi.MusGalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MusGal;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE8FAED02707592000F9DF1D /* Build configuration list for PBXProject "MusGal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE8FAEFD2707592200F9DF1D /* Debug */,
+				AE8FAEFE2707592200F9DF1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE8FAEFF2707592200F9DF1D /* Build configuration list for PBXNativeTarget "MusGal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE8FAF002707592200F9DF1D /* Debug */,
+				AE8FAF012707592200F9DF1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE8FAF022707592200F9DF1D /* Build configuration list for PBXNativeTarget "MusGalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE8FAF032707592200F9DF1D /* Debug */,
+				AE8FAF042707592200F9DF1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE8FAF052707592200F9DF1D /* Build configuration list for PBXNativeTarget "MusGalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE8FAF062707592200F9DF1D /* Debug */,
+				AE8FAF072707592200F9DF1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE8FAECD2707592000F9DF1D /* Project object */;
+}
