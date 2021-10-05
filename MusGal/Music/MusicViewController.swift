@@ -8,12 +8,17 @@
 import UIKit
 
 class MusicViewController: UIViewController {
+    
+    struct Cells {
+        static let cell = "CustomCell"
+    }
 
     var songs: [Song] = []
 
     private let tableView: UITableView = {
        let table = UITableView()
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+//        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(UINib(nibName: Cells.cell, bundle: nil), forCellReuseIdentifier: Cells.cell)
         return table
     }()
 
@@ -106,14 +111,21 @@ extension MusicViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.cell, for: indexPath) as! CustomCell
+//        if cell == nil {
+//            cell = UITableViewCell(style: .value1, reuseIdentifier: "reuseIdentifier")
+//        }
+        
+
         let song = songs[indexPath.row]
-        cell.textLabel?.text = song.trackName
+//        cell.textLabel?.text = song.trackName
 //        cell.detailTextLabel?.text = song.artistName
-        cell.detailTextLabel?.text = song.artistName
-//        print(song.artistName)
-        cell.detailTextLabel?.textColor = .red
-        cell.imageView?.image = UIImage(named: song.imageName)
+//        cell.imageView?.image = UIImage(named: song.imageName)
+        
+        cell.trackLabel.text = song.trackName
+        cell.artistLabel.text = song.artistName
+        cell.albumImageView.image = UIImage(named: song.imageName)
         return cell
     }
     
@@ -141,3 +153,5 @@ struct Song {
     let songName: String
     
 }
+
+

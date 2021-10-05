@@ -34,6 +34,8 @@
 		AEDD88E5270CA47C00BB0C0F /* Max Richter - November.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88D6270CA47B00BB0C0F /* Max Richter - November.mp3 */; };
 		AEDD88E6270CA47C00BB0C0F /* Eden - Crash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88D7270CA47B00BB0C0F /* Eden - Crash.mp3 */; };
 		AEDD88E7270CA47C00BB0C0F /* Angèle Dubeau, La Pietà - Experience.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88D8270CA47C00BB0C0F /* Angèle Dubeau, La Pietà - Experience.mp3 */; };
+		AEDD88EA270CA86B00BB0C0F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD88E8270CA86B00BB0C0F /* CustomCell.swift */; };
+		AEDD88EB270CA86B00BB0C0F /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88E9270CA86B00BB0C0F /* CustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		AEDD88D6270CA47B00BB0C0F /* Max Richter - November.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Max Richter - November.mp3"; sourceTree = "<group>"; };
 		AEDD88D7270CA47B00BB0C0F /* Eden - Crash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Eden - Crash.mp3"; sourceTree = "<group>"; };
 		AEDD88D8270CA47C00BB0C0F /* Angèle Dubeau, La Pietà - Experience.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Angèle Dubeau, La Pietà - Experience.mp3"; sourceTree = "<group>"; };
+		AEDD88E8270CA86B00BB0C0F /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		AEDD88E9270CA86B00BB0C0F /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		D001BED64D607C26DBFAD010 /* Pods_MusGal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusGal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE93A2B4BCCDC1D409F7FD8 /* Pods-MusGal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusGal.debug.xcconfig"; path = "Target Support Files/Pods-MusGal/Pods-MusGal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,6 +194,8 @@
 		AECDE43C2709CBD10068CE1F /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				AEDD88E8270CA86B00BB0C0F /* CustomCell.swift */,
+				AEDD88E9270CA86B00BB0C0F /* CustomCell.xib */,
 				AEDD88C7270C9D7900BB0C0F /* MusicViewController.swift */,
 				AE8FAF08270762FD00F9DF1D /* PlayerViewController.swift */,
 			);
@@ -330,6 +336,7 @@
 				AEDD88E0270CA47C00BB0C0F /* The Neighbourhood - Sweater Weather.mp3 in Resources */,
 				AEDD88DC270CA47C00BB0C0F /* Fall Out Boy - Irresistible.mp3 in Resources */,
 				AEDD88DF270CA47C00BB0C0F /* SYML - Where's My Love.mp3 in Resources */,
+				AEDD88EB270CA86B00BB0C0F /* CustomCell.xib in Resources */,
 				AEDD88DB270CA47C00BB0C0F /* Imagine Dragons - One Day.mp3 in Resources */,
 				AEDD88E4270CA47C00BB0C0F /* Imagine Dragons - Demons.mp3 in Resources */,
 				AEDD88E6270CA47C00BB0C0F /* Eden - Crash.mp3 in Resources */,
@@ -412,6 +419,7 @@
 				AEDD88C8270C9D7900BB0C0F /* MusicViewController.swift in Sources */,
 				AE8FAF0B2707631C00F9DF1D /* GalleryViewController.swift in Sources */,
 				AE8FAED92707592000F9DF1D /* AppDelegate.swift in Sources */,
+				AEDD88EA270CA86B00BB0C0F /* CustomCell.swift in Sources */,
 				AE8FAEDB2707592000F9DF1D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

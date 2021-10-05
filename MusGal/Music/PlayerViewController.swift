@@ -104,13 +104,55 @@ class PlayerViewController: UIViewController {
         
     }
     
+    @objc func didSliderUsed( _ slider: UISlider) {
+        let value = slider.value
+        player?.volume = value
+    }
+
+    @objc func didPrevButtonUsed(){
+        if position > 0 {
+            position -= 1
+            player?.stop()
+            for subview in self.view.subviews {
+                subview.removeFromSuperview()
+            }
+            configure()
+        }
+    }
+    
+    @objc func didPausePlayButtonUsed(){
+//        guard let player = player else { return }
+        if player?.isPlaying == true {
+            player?.pause()
+            
+            UIView.animate(withDuration: 3) {
+                self.pausePlayButton.setBackgroundImage(UIImage(named: "Play"), for: .normal)
+            }
+
+            pausePlayButton.setBackgroundImage(UIImage(named: "Play"), for: .normal)
+        } else {
+            player?.play()
+            UIView.animate(withDuration: 3) {
+                self.pausePlayButton.setBackgroundImage(UIImage(named: "Pause"), for: .normal)
+            }        }
+    }
+    
+    @objc func didNextButtonUsed(){
+        if position < songs.count - 1 {
+            position += 1
+            player?.play()
+            for subview in self.view.subviews {
+                subview.removeFromSuperview()
+            }
+            configure()
+        }
+    }
+    
     func setup() {
         
         pausePlayButton.setBackgroundImage(UIImage(named: "Pause"), for: .normal)
-
-        guard let playerView = self.view else { return }
         
-        playerView.backgroundColor = .gray
+        self.view.backgroundColor = .gray
         
         for subview in [trackLabel, artistLabel, albumImageVIew, slider, prevButton,
                         pausePlayButton, nextButton] {
@@ -118,7 +160,7 @@ class PlayerViewController: UIViewController {
         }
         
         albumImageVIew.snp.makeConstraints{
-            $0.height.equalTo(playerView.snp.width)
+            $0.height.equalTo(self.view.snp.width)
             $0.topMargin.equalToSuperview().inset(10)
             $0.right.left.equalToSuperview().inset(10)
             
@@ -158,8 +200,15 @@ class PlayerViewController: UIViewController {
             $0.width.height.equalTo(70)
             $0.centerY.equalTo(pausePlayButton)
         }
+        
+        slider.addTarget(self, action: #selector(didSliderUsed(_:)), for: .valueChanged)
+        prevButton.addTarget(self, action: #selector(didPrevButtonUsed), for: .touchUpInside)
+        pausePlayButton.addTarget(self, action: #selector(didPausePlayButtonUsed), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(didNextButtonUsed), for: .touchUpInside)
     
     }
+    
+    
 }
 
 
