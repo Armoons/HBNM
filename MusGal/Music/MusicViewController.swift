@@ -111,7 +111,7 @@ extension MusicViewController: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = song.trackName
 //        cell.detailTextLabel?.text = song.artistName
         cell.detailTextLabel?.text = song.artistName
-        print(song.artistName)
+//        print(song.artistName)
         cell.detailTextLabel?.textColor = .red
         cell.imageView?.image = UIImage(named: song.imageName)
         return cell
@@ -121,7 +121,17 @@ extension MusicViewController: UITableViewDataSource, UITableViewDelegate {
         return 100
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let position = indexPath.row
+        
+        let vc = PlayerViewController()
+//        guard let vc = storyboard?.instantiateViewController(withIdentifier: "player") as? PlayerViewController else { return }
+        vc.position = position
+        vc.songs = songs
+        present(vc, animated: true)
+        
+    }
 }
 
 struct Song {

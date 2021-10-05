@@ -12,7 +12,7 @@ import SnapKit
 class PlayerViewController: UIViewController {
     
     public var position: Int = 0
-//    public var songs: [Song] = []
+    public var songs: [Song] = []
     
     
     var player: AVAudioPlayer?
@@ -66,22 +66,55 @@ class PlayerViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if self.view.subviews.count == 0{
-//            configure()
+            configure()
             setup()
         }
     }
     
+    func configure(){
+        
+        let song  = songs[position]
+        let path = Bundle.main.path(forResource: song.songName, ofType: "mp3")!
+        let url = URL(fileURLWithPath: path)
+        
+
+        do {
+            
+            try AVAudioSession.sharedInstance().setMode(.default)
+            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord, mode: .spokenAudio, options: .defaultToSpeaker)
+            
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            
+            player.volume = 0.5
+            player.play()
+        }
+        
+        catch {
+            print("Error")
+        }
+        
+        trackLabel.text = song.trackName
+        artistLabel.text = song.artistName
+        albumImageVIew.image = UIImage(named: song.imageName)
+        
+        slider.value = 0.5
+       
+        
+    }
+    
     func setup() {
         
-        let playerView = self.view
-        guard let playerView = playerView else { return }
         pausePlayButton.setBackgroundImage(UIImage(named: "Pause"), for: .normal)
 
+        guard let playerView = self.view else { return }
+        
         playerView.backgroundColor = .gray
         
         for subview in [trackLabel, artistLabel, albumImageVIew, slider, prevButton,
                         pausePlayButton, nextButton] {
-            playerView.addSubview(subview)
+            self.view.addSubview(subview)
         }
         
         albumImageVIew.snp.makeConstraints{

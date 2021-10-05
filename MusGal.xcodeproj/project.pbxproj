@@ -18,8 +18,22 @@
 		AE8FAEFC2707592200F9DF1D /* MusGalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8FAEFB2707592200F9DF1D /* MusGalUITestsLaunchTests.swift */; };
 		AE8FAF09270762FD00F9DF1D /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8FAF08270762FD00F9DF1D /* PlayerViewController.swift */; };
 		AE8FAF0B2707631C00F9DF1D /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8FAF0A2707631C00F9DF1D /* GalleryViewController.swift */; };
-		AECDE4462709D3870068CE1F /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECDE4452709D3870068CE1F /* MusicCell.swift */; };
 		AEDD88C8270C9D7900BB0C0F /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD88C7270C9D7900BB0C0F /* MusicViewController.swift */; };
+		AEDD88D9270CA47C00BB0C0F /* Dan Owen - Hideaway.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88C9270CA47600BB0C0F /* Dan Owen - Hideaway.mp3 */; };
+		AEDD88DA270CA47C00BB0C0F /* Twenty One Pilots - Chlorine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88CA270CA47600BB0C0F /* Twenty One Pilots - Chlorine.mp3 */; };
+		AEDD88DB270CA47C00BB0C0F /* Imagine Dragons - One Day.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88CB270CA47600BB0C0F /* Imagine Dragons - One Day.mp3 */; };
+		AEDD88DC270CA47C00BB0C0F /* Fall Out Boy - Irresistible.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88CC270CA47600BB0C0F /* Fall Out Boy - Irresistible.mp3 */; };
+		AEDD88DD270CA47C00BB0C0F /* Imagine Dragons - Believer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88CD270CA47700BB0C0F /* Imagine Dragons - Believer.mp3 */; };
+		AEDD88DE270CA47C00BB0C0F /* Abel Korzeniowski - Dance For Me Wallis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88CE270CA47700BB0C0F /* Abel Korzeniowski - Dance For Me Wallis.mp3 */; };
+		AEDD88DF270CA47C00BB0C0F /* SYML - Where's My Love.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88CF270CA47700BB0C0F /* SYML - Where's My Love.mp3 */; };
+		AEDD88E0270CA47C00BB0C0F /* The Neighbourhood - Sweater Weather.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88D0270CA47700BB0C0F /* The Neighbourhood - Sweater Weather.mp3 */; };
+		AEDD88E1270CA47C00BB0C0F /* Kodaline - All I Want.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88D1270CA47800BB0C0F /* Kodaline - All I Want.mp3 */; };
+		AEDD88E2270CA47C00BB0C0F /* Portair - Places.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88D2270CA47800BB0C0F /* Portair - Places.mp3 */; };
+		AEDD88E3270CA47C00BB0C0F /* Sleeping At Last - Earth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88D4270CA47B00BB0C0F /* Sleeping At Last - Earth.mp3 */; };
+		AEDD88E4270CA47C00BB0C0F /* Imagine Dragons - Demons.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88D5270CA47B00BB0C0F /* Imagine Dragons - Demons.mp3 */; };
+		AEDD88E5270CA47C00BB0C0F /* Max Richter - November.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88D6270CA47B00BB0C0F /* Max Richter - November.mp3 */; };
+		AEDD88E6270CA47C00BB0C0F /* Eden - Crash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88D7270CA47B00BB0C0F /* Eden - Crash.mp3 */; };
+		AEDD88E7270CA47C00BB0C0F /* Angèle Dubeau, La Pietà - Experience.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDD88D8270CA47C00BB0C0F /* Angèle Dubeau, La Pietà - Experience.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +69,22 @@
 		AE8FAEFB2707592200F9DF1D /* MusGalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusGalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AE8FAF08270762FD00F9DF1D /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		AE8FAF0A2707631C00F9DF1D /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
-		AECDE4452709D3870068CE1F /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 		AEDD88C7270C9D7900BB0C0F /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		AEDD88C9270CA47600BB0C0F /* Dan Owen - Hideaway.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Dan Owen - Hideaway.mp3"; sourceTree = "<group>"; };
+		AEDD88CA270CA47600BB0C0F /* Twenty One Pilots - Chlorine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Twenty One Pilots - Chlorine.mp3"; sourceTree = "<group>"; };
+		AEDD88CB270CA47600BB0C0F /* Imagine Dragons - One Day.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Imagine Dragons - One Day.mp3"; sourceTree = "<group>"; };
+		AEDD88CC270CA47600BB0C0F /* Fall Out Boy - Irresistible.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Fall Out Boy - Irresistible.mp3"; sourceTree = "<group>"; };
+		AEDD88CD270CA47700BB0C0F /* Imagine Dragons - Believer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Imagine Dragons - Believer.mp3"; sourceTree = "<group>"; };
+		AEDD88CE270CA47700BB0C0F /* Abel Korzeniowski - Dance For Me Wallis.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Abel Korzeniowski - Dance For Me Wallis.mp3"; sourceTree = "<group>"; };
+		AEDD88CF270CA47700BB0C0F /* SYML - Where's My Love.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "SYML - Where's My Love.mp3"; sourceTree = "<group>"; };
+		AEDD88D0270CA47700BB0C0F /* The Neighbourhood - Sweater Weather.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Neighbourhood - Sweater Weather.mp3"; sourceTree = "<group>"; };
+		AEDD88D1270CA47800BB0C0F /* Kodaline - All I Want.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Kodaline - All I Want.mp3"; sourceTree = "<group>"; };
+		AEDD88D2270CA47800BB0C0F /* Portair - Places.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Portair - Places.mp3"; sourceTree = "<group>"; };
+		AEDD88D4270CA47B00BB0C0F /* Sleeping At Last - Earth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sleeping At Last - Earth.mp3"; sourceTree = "<group>"; };
+		AEDD88D5270CA47B00BB0C0F /* Imagine Dragons - Demons.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Imagine Dragons - Demons.mp3"; sourceTree = "<group>"; };
+		AEDD88D6270CA47B00BB0C0F /* Max Richter - November.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Max Richter - November.mp3"; sourceTree = "<group>"; };
+		AEDD88D7270CA47B00BB0C0F /* Eden - Crash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Eden - Crash.mp3"; sourceTree = "<group>"; };
+		AEDD88D8270CA47C00BB0C0F /* Angèle Dubeau, La Pietà - Experience.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Angèle Dubeau, La Pietà - Experience.mp3"; sourceTree = "<group>"; };
 		D001BED64D607C26DBFAD010 /* Pods_MusGal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusGal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE93A2B4BCCDC1D409F7FD8 /* Pods-MusGal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusGal.debug.xcconfig"; path = "Target Support Files/Pods-MusGal/Pods-MusGal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +165,7 @@
 				AE8FAEE12707592200F9DF1D /* Assets.xcassets */,
 				AE8FAEE32707592200F9DF1D /* LaunchScreen.storyboard */,
 				AE8FAEE62707592200F9DF1D /* Info.plist */,
+				AEDD88D3270CA47B00BB0C0F /* Songs */,
 			);
 			path = MusGal;
 			sourceTree = "<group>";
@@ -161,11 +190,32 @@
 		AECDE43C2709CBD10068CE1F /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				AECDE4452709D3870068CE1F /* MusicCell.swift */,
 				AEDD88C7270C9D7900BB0C0F /* MusicViewController.swift */,
 				AE8FAF08270762FD00F9DF1D /* PlayerViewController.swift */,
 			);
 			path = Music;
+			sourceTree = "<group>";
+		};
+		AEDD88D3270CA47B00BB0C0F /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				AEDD88CE270CA47700BB0C0F /* Abel Korzeniowski - Dance For Me Wallis.mp3 */,
+				AEDD88D8270CA47C00BB0C0F /* Angèle Dubeau, La Pietà - Experience.mp3 */,
+				AEDD88C9270CA47600BB0C0F /* Dan Owen - Hideaway.mp3 */,
+				AEDD88D7270CA47B00BB0C0F /* Eden - Crash.mp3 */,
+				AEDD88CC270CA47600BB0C0F /* Fall Out Boy - Irresistible.mp3 */,
+				AEDD88CD270CA47700BB0C0F /* Imagine Dragons - Believer.mp3 */,
+				AEDD88D5270CA47B00BB0C0F /* Imagine Dragons - Demons.mp3 */,
+				AEDD88CB270CA47600BB0C0F /* Imagine Dragons - One Day.mp3 */,
+				AEDD88D1270CA47800BB0C0F /* Kodaline - All I Want.mp3 */,
+				AEDD88D6270CA47B00BB0C0F /* Max Richter - November.mp3 */,
+				AEDD88D2270CA47800BB0C0F /* Portair - Places.mp3 */,
+				AEDD88D4270CA47B00BB0C0F /* Sleeping At Last - Earth.mp3 */,
+				AEDD88CF270CA47700BB0C0F /* SYML - Where's My Love.mp3 */,
+				AEDD88D0270CA47700BB0C0F /* The Neighbourhood - Sweater Weather.mp3 */,
+				AEDD88CA270CA47600BB0C0F /* Twenty One Pilots - Chlorine.mp3 */,
+			);
+			path = Songs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +325,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE8FAEE52707592200F9DF1D /* LaunchScreen.storyboard in Resources */,
+				AEDD88DE270CA47C00BB0C0F /* Abel Korzeniowski - Dance For Me Wallis.mp3 in Resources */,
+				AEDD88D9270CA47C00BB0C0F /* Dan Owen - Hideaway.mp3 in Resources */,
+				AEDD88E0270CA47C00BB0C0F /* The Neighbourhood - Sweater Weather.mp3 in Resources */,
+				AEDD88DC270CA47C00BB0C0F /* Fall Out Boy - Irresistible.mp3 in Resources */,
+				AEDD88DF270CA47C00BB0C0F /* SYML - Where's My Love.mp3 in Resources */,
+				AEDD88DB270CA47C00BB0C0F /* Imagine Dragons - One Day.mp3 in Resources */,
+				AEDD88E4270CA47C00BB0C0F /* Imagine Dragons - Demons.mp3 in Resources */,
+				AEDD88E6270CA47C00BB0C0F /* Eden - Crash.mp3 in Resources */,
+				AEDD88E7270CA47C00BB0C0F /* Angèle Dubeau, La Pietà - Experience.mp3 in Resources */,
+				AEDD88E5270CA47C00BB0C0F /* Max Richter - November.mp3 in Resources */,
+				AEDD88E1270CA47C00BB0C0F /* Kodaline - All I Want.mp3 in Resources */,
+				AEDD88E2270CA47C00BB0C0F /* Portair - Places.mp3 in Resources */,
+				AEDD88DA270CA47C00BB0C0F /* Twenty One Pilots - Chlorine.mp3 in Resources */,
+				AEDD88DD270CA47C00BB0C0F /* Imagine Dragons - Believer.mp3 in Resources */,
+				AEDD88E3270CA47C00BB0C0F /* Sleeping At Last - Earth.mp3 in Resources */,
 				AE8FAEE22707592200F9DF1D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,7 +408,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE8FAF09270762FD00F9DF1D /* PlayerViewController.swift in Sources */,
-				AECDE4462709D3870068CE1F /* MusicCell.swift in Sources */,
 				AE8FAEDD2707592000F9DF1D /* MainTabBarController.swift in Sources */,
 				AEDD88C8270C9D7900BB0C0F /* MusicViewController.swift in Sources */,
 				AE8FAF0B2707631C00F9DF1D /* GalleryViewController.swift in Sources */,
