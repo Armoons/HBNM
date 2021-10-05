@@ -11,50 +11,24 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        //        self.tabBar.backgroundColor = .white
+        self.view.backgroundColor = .white
+        
         //        tabBar.tintColor = .blue
-        //        tabBar.backgroundColor = UIСolor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
+//        tabBar.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
         setupTabBar()
     }
     
-    //    @available(iOS 15.0, *) {
-    //        let appearance = UITabBarAppearance()
-    //        appearance.configureWithOpaqueBackground()
-    //        appearance.backgroundColor = .white
-    //        tabBar.standardAppearance =  appearance
-    //        tabBar.scrollEdgeAppearance = tabBar.standardAppearance
-    //}
-    
-//    @available(iOS 15.0, *)
-//    private func updateTabBarAppearance() {
-//        let tabBarAppearance: UITabBarAppearance = UITabBarAppearance()
-//        tabBarAppearance.configureWithOpaqueBackground()
-//
-//        let barTintColor: UIColor = .white
-//        tabBarAppearance.backgroundColor = barTintColor
-//
-//        updateTabBarItemAppearance(appearance: tabBarAppearance.compactInlineLayoutAppearance)
-//        updateTabBarItemAppearance(appearance: tabBarAppearance.inlineLayoutAppearance)
-//        updateTabBarItemAppearance(appearance: tabBarAppearance.stackedLayoutAppearance)
-//
-//        self.tabBar.standardAppearance = tabBarAppearance
-//        self.tabBar.scrollEdgeAppearance = tabBarAppearance
-//    }
-//
-//    @available(iOS 13.0, *)
-//    private func updateTabBarItemAppearance(appearance: UITabBarItemAppearance) {
-//        let tintColor: UIColor = .red
-//        let unselectedItemTintColor: UIColor = .green
-//
-//        appearance.selected.iconColor = tintColor
-//        appearance.normal.iconColor = unselectedItemTintColor
-//    }
+
     
     func setupTabBar() {
+        self.definesPresentationContext = true
         guard let musicImage: UIImage = UIImage(named: "Music") else { return }
         guard let galerryImage: UIImage = UIImage(named: "Gallery") else { return }
         
         let musicController = createNavigationVC(vc: MusicViewController(), itemImage: musicImage)
+//        let musicController = createNavigationVC(vc: MusicViewController(), itemImage: musicImage)
+//        let musicController = createNavigationVC(vc: MainViewController(), itemImage: musicImage)
         let galleryController = createNavigationVC(vc: GalleryViewController(), itemImage: galerryImage)
         
         viewControllers = [musicController, galleryController]
@@ -80,3 +54,40 @@ extension UITabBarController {
     }
     
 }
+
+
+
+
+
+//        @available(iOS 15.0, *) {
+//            let appearance = UITabBarAppearance()
+//            appearance.configureWithOpaqueBackground()
+//            appearance.backgroundColor = .white
+//            tabBar.standardAppearance =  appearance
+//            tabBar.scrollEdgeAppearance = tabBar.standardAppearance
+//    }
+    
+//    @available(iOS 15.0, *)
+//    private func updateTabBarAppearance() {
+//        let tabBarAppearance: UITabBarAppearance = UITabBarAppearance()
+//        tabBarAppearance.configureWithOpaqueBackground()
+//
+//        let barTintColor: UIColor = .white
+//        tabBarAppearance.backgroundColor = barTintColor
+//
+//        updateTabBarItemAppearance(appearance: tabBarAppearance.compactInlineLayoutAppearance)
+//        updateTabBarItemAppearance(appearance: tabBarAppearance.inlineLayoutAppearance)
+//        updateTabBarItemAppearance(appearance: tabBarAppearance.stackedLayoutAppearance)
+//
+//        self.tabBar.standardAppearance = tabBarAppearance
+//        self.tabBar.scrollEdgeAppearance = tabBarAppearance
+//    }
+//
+//    @available(iOS 13.0, *)
+//    private func updateTabBarItemAppearance(appearance: UITabBarItemAppearance) {
+//        let tintColor: UIColor = .red
+//        let unselectedItemTintColor: UIColor = .green
+//
+//        appearance.selected.iconColor = tintColor
+//        appearance.normal.iconColor = unselectedItemTintColor
+//    }
