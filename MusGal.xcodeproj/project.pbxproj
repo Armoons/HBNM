@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F05726FF0D0EA089529A1ED /* Pods_MusGal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001BED64D607C26DBFAD010 /* Pods_MusGal.framework */; };
+		AE804F6A270CD4A000DC2A1D /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE804F69270CD4A000DC2A1D /* ImageViewController.swift */; };
 		AE8FAED92707592000F9DF1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8FAED82707592000F9DF1D /* AppDelegate.swift */; };
 		AE8FAEDB2707592000F9DF1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8FAEDA2707592000F9DF1D /* SceneDelegate.swift */; };
 		AE8FAEDD2707592000F9DF1D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8FAEDC2707592000F9DF1D /* MainTabBarController.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		3530CDC7364F69E4E36E6E1D /* Pods-MusGal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusGal.release.xcconfig"; path = "Target Support Files/Pods-MusGal/Pods-MusGal.release.xcconfig"; sourceTree = "<group>"; };
+		AE804F69270CD4A000DC2A1D /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		AE8FAED52707592000F9DF1D /* MusGal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusGal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE8FAED82707592000F9DF1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE8FAEDA2707592000F9DF1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -229,8 +231,9 @@
 		AEDD88EC270CC3D500BB0C0F /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				AE8FAF0A2707631C00F9DF1D /* GalleryViewController.swift */,
+				AE804F69270CD4A000DC2A1D /* ImageViewController.swift */,
 				AEDD88ED270CC48800BB0C0F /* CustomCollectionViewCell.swift */,
+				AE8FAF0A2707631C00F9DF1D /* GalleryViewController.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE8FAF09270762FD00F9DF1D /* PlayerViewController.swift in Sources */,
+				AE804F6A270CD4A000DC2A1D /* ImageViewController.swift in Sources */,
 				AE8FAEDD2707592000F9DF1D /* MainTabBarController.swift in Sources */,
 				AEDD88C8270C9D7900BB0C0F /* MusicViewController.swift in Sources */,
 				AEDD88EE270CC48800BB0C0F /* CustomCollectionViewCell.swift in Sources */,

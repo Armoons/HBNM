@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class GalleryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class GalleryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
      var images: [UIImage] = []
 
@@ -32,6 +32,13 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func setup() {
+        
+        if #available(iOS 15.0, *) {
+            UITableView.appearance().sectionHeaderTopPadding = 0
+        }
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Gallery"
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -46,7 +53,6 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
         collectionView.snp.makeConstraints{
             $0.edges.equalToSuperview()
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -64,10 +70,18 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
         return CGSize(width: side, height: side)
     }
     
-
-    
-    
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = ImageViewController()
+        vc.index = indexPath.row
+        vc.imageArray = images
+//        pushView(viewController: vc)
+        let transition = CATransition()
+        transition.duration = 0.0
+        transition.type = .fade
+        self.view.window?.layer.add(transition, forKey: kCATransition)
+        navigationController?.pushViewController(vc, animated: true)
     
 }
 
+
+}
