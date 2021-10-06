@@ -12,7 +12,6 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     
     var index: Int = 0
     var imageArray: [UIImage] = []
-//    let navBar: UINavigationItem? = nil
     
     private let scrollView: UIScrollView = {
         let view = UIScrollView()
@@ -49,7 +48,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupGesture()
+        setupGesture()
         setup()
         loadImage()
         
@@ -99,4 +98,81 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         dismissView()
 
     }
+    
+    func setupGesture() {
+        let singleTapGesture = UITapGestureRecognizer(target: self,
+                                                      action: #selector(singleTapOnScrollView(recognizer:)))
+        singleTapGesture.numberOfTapsRequired = 1
+        scrollView.addGestureRecognizer(singleTapGesture)
+        
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(doubleTapOnScrollView(recognizer:)))
+        doubleTapGesture.numberOfTapsRequired = 2
+        scrollView.addGestureRecognizer(doubleTapGesture)
+        
+        let rightSwipe: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self,
+                                                                            action: #selector(handleSwipeFrom(recognizer:)))
+        let leftSwipe: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self,
+                                                                           action: #selector(handleSwipeFrom(recognizer:)))
+        
+        rightSwipe.direction = .right
+        leftSwipe.direction = .left
+        
+        for swipe in [rightSwipe, leftSwipe] {
+            scrollView.addGestureRecognizer(swipe)
+        }
+        
+
+    }
+    
+    @objc func singleTapOnScrollView(recognizer: UITapGestureRecognizer) {
+        closeButton.isHidden = !closeButton.isHidden
+        countLabel.isHidden = !countLabel.isHidden
+    }
+    
+    @objc func doubleTapOnScrollView(recognizer: UITapGestureRecognizer) {
+        if scrollView.zoomScale == 1 {
+            print("rgr")
+            scrollView.zoom(to: zoomRectForScale(scale: scrollView.maximumZoomScale,
+                                                 center: recognizer.location(in: recognizer.view)),animated: true)
+            closeButton.isHidden = true
+            countLabel.isHidden = true
+        } else {
+            scrollView.setZoomScale(1, animated: true)
+            closeButton.isHidden = false
+            countLabel.isHidden = false
+        }
+    }
+    
+    func zoomRectForScale(scale: CGFloat, center: CGPoint) -> CGRect {
+        var zoomRect = CGRect.zero
+        zoomRect.size.height = imageView.frame.size.height / scale
+        zoomRect.size.width = imageView.frame.size.width / scale
+        
+        let newCenter = imageView.convert(center, from: scrollView)
+        zoomRect.origin.x = newCenter.x - (zoomRect.size.width / 2)
+        zoomRect.origin.y = newCenter.y - (zoomRect.size.height / 2)
+        
+        return zoomRect
+    }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    
+    @objc func handleSwipeFrom(recognizer: UISwipeGestureRecognizer) {
+        let direction: UISwipeGestureRecognizer.Direction = recognizer.direction
+        
+        switch direction {
+        case UISwipeGestureRecognizer.Direction.right:
+            self.index -= 1
+        case UISwipeGestureRecognizer.Direction.left:
+            self.index += 1
+        default:
+            break
+        }
+        
+        self.index = self.index < 0 ? self.imageArray.count - 1 : self.index % self.imageArray.count
+        loadImage()
+    }
+    
 }
