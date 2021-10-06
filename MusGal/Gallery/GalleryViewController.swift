@@ -10,7 +10,9 @@ import SnapKit
 
 class GalleryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-     var images: [UIImage] = []
+    var images: [UIImage] = []
+    let navBar = UINavigationItem()
+
 
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -28,14 +30,33 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = false
+
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationItem.hidesBackButton = true
         setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tabBarController?.tabBar.isHidden = false
+        
+        self.navigationController?.navigationBar.isHidden = false
+//        self.navigationItem.hidesBackButton = true
+//        self.navigationItem.backBarButtonItem = nil
+
     }
     
     func setup() {
         
-        if #available(iOS 15.0, *) {
-            UITableView.appearance().sectionHeaderTopPadding = 0
-        }
+//        if #available(iOS 15.0, *) {
+//            UITableView.appearance().sectionHeaderTopPadding = 0
+//        }
+        
+//        self.navigationItem.leftBarButtonItem = nil
+
+        
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Gallery"
         
@@ -74,12 +95,7 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
         let vc = ImageViewController()
         vc.index = indexPath.row
         vc.imageArray = images
-//        pushView(viewController: vc)
-        let transition = CATransition()
-        transition.duration = 0.0
-        transition.type = .fade
-        self.view.window?.layer.add(transition, forKey: kCATransition)
-        navigationController?.pushViewController(vc, animated: true)
+        pushView(viewController: vc)
     
 }
 

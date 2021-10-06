@@ -24,13 +24,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0H-GL-iSe">
-                        <rect key="frame" x="115" y="42" width="205" height="19"/>
+                        <rect key="frame" x="115" y="50" width="205" height="19"/>
                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bnw-zJ-pqn">
-                        <rect key="frame" x="115" y="17" width="200" height="20"/>
+                        <rect key="frame" x="115" y="25" width="200" height="20"/>
                         <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -45,7 +45,7 @@
                     <constraint firstItem="Kz5-ts-akk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="clo-dn-Twd"/>
                     <constraint firstAttribute="bottom" secondItem="Kz5-ts-akk" secondAttribute="bottom" id="fsY-GE-Guo"/>
                     <constraint firstItem="Bnw-zJ-pqn" firstAttribute="leading" secondItem="Kz5-ts-akk" secondAttribute="trailing" constant="15" id="n3H-bx-nea"/>
-                    <constraint firstItem="Bnw-zJ-pqn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="wFE-XG-Tvw"/>
+                    <constraint firstItem="Bnw-zJ-pqn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="wFE-XG-Tvw"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

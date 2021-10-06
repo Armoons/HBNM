@@ -29,9 +29,9 @@ class MusicViewController: UIViewController {
         tableView.delegate = self
         
         
-        if #available(iOS 15.0, *) {
-            UITableView.appearance().sectionHeaderTopPadding = 0
-        }
+//        if #available(iOS 15.0, *) {
+//            UITableView.appearance().sectionHeaderTopPadding = 0
+//        }
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Music"
         configureSongs()
@@ -135,8 +135,8 @@ extension MusicViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        tableView.deselectRow(at: indexPath, animated: true)
         let position = indexPath.row
-        
         let vc = PlayerViewController()
 //        guard let vc = storyboard?.instantiateViewController(withIdentifier: "player") as? PlayerViewController else { return }
         vc.position = position

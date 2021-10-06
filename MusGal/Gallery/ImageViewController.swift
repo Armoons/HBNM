@@ -12,6 +12,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     
     var index: Int = 0
     var imageArray: [UIImage] = []
+//    let navBar: UINavigationItem? = nil
     
     private let scrollView: UIScrollView = {
         let view = UIScrollView()
@@ -54,12 +55,15 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    func setup() {
-        
+    override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.isHidden = true
-
         
+    }
+    
+    
+    func setup() {
+            
         scrollView.delegate = self
         scrollView.frame = view.bounds
         imageView.frame = scrollView.bounds
@@ -83,7 +87,6 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
             $0.left.equalToSuperview().inset(20)
             $0.top.equalTo(navHeight)
             $0.width.height.equalTo(45)
-            
         }
     }
     
@@ -93,11 +96,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @objc func closeButtonUsed() {
-        let transition = CATransition()
-        transition.duration = 0.3
-        transition.type = .reveal
-        transition.subtype = .fromBottom
-        self.view.window?.layer.add(transition, forKey: kCATransition)
-        navigationController?.popViewController(animated: true)
+        dismissView()
+
     }
 }
