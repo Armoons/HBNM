@@ -16,7 +16,27 @@ class PlayerViewController: UIViewController {
     
     
     var player: AVAudioPlayer?
-    private let slider = UISlider()
+    
+    
+   
+    private let volumeSlider = UISlider()
+    private let trackSlider: UISlider = {
+        let slider = UISlider()
+        slider.value = 0
+        slider.tintColor = .white
+        slider.maximumTrackTintColor = .lightGray
+        slider.setThumbImage(UIImage(named: "Thumb20"), for: .normal)
+        return slider
+    }()
+    
+    private let musicTimeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "0:00"
+        label.font = UIFont(name: "Palatino Bold", size: 15)
+        label.textColor = .white
+        label.numberOfLines = 0
+        return label
+    }()
     
     private let albumImageVIew: UIImageView = {
         let album = UIImageView()
@@ -58,13 +78,23 @@ class PlayerViewController: UIViewController {
     private let nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .white
-//        button.setImage(UIImage(named: "Конец"), for: .normal)
+        //        button.setImage(UIImage(named: "Конец"), for: .normal)
         button.setBackgroundImage(UIImage(named: "Next"), for: .normal)
         return button
     }()
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        player?.stop()
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
+        _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateSlider), userInfo: nil, repeats: true)
+        
+        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateMusicTimeLabel), userInfo: nil, repeats: true)
+
         if self.view.subviews.count == 0{
             configure()
             setup()
@@ -77,7 +107,7 @@ class PlayerViewController: UIViewController {
         let path = Bundle.main.path(forResource: song.songName, ofType: "mp3")!
         let url = URL(fileURLWithPath: path)
         
-
+        
         do {
             
             try AVAudioSession.sharedInstance().setMode(.default)
@@ -99,16 +129,27 @@ class PlayerViewController: UIViewController {
         artistLabel.text = song.artistName
         albumImageVIew.image = UIImage(named: song.imageName)
         
-        slider.value = 0.5
-       
+        volumeSlider.value = 0.5
+        
         
     }
     
-    @objc func didSliderUsed( _ slider: UISlider) {
+    @objc func didVolumeSliderUsed( _ slider: UISlider) {
         let value = slider.value
         player?.volume = value
     }
-
+    
+    @objc func didTrackSliderUsed( _ slider: UISlider) {
+        guard let player = player else { return }
+        
+        player.stop()
+        player.currentTime = TimeInterval(slider.value)
+        if pausePlayButton.currentBackgroundImage == UIImage(named: "Pause") {
+            player.prepareToPlay()
+            player.play()
+        }
+    }
+    
     @objc func didPrevButtonUsed(){
         if position > 0 {
             position -= 1
@@ -121,14 +162,14 @@ class PlayerViewController: UIViewController {
     }
     
     @objc func didPausePlayButtonUsed(){
-//        guard let player = player else { return }
+        //        guard let player = player else { return }
         if player?.isPlaying == true {
             player?.pause()
             
             UIView.animate(withDuration: 3) {
                 self.pausePlayButton.setBackgroundImage(UIImage(named: "Play"), for: .normal)
             }
-
+            
             pausePlayButton.setBackgroundImage(UIImage(named: "Play"), for: .normal)
         } else {
             player?.play()
@@ -148,14 +189,43 @@ class PlayerViewController: UIViewController {
         }
     }
     
-    func setup() {
+    @objc func updateSlider() {
+        guard let player = player else { return }
         
+        trackSlider.value = Float(player.currentTime)
+    }
+    
+//    func nextTrack(position: Int) {
+//        configure(position: position)
+//    }
+    
+    @objc func updateMusicTimeLabel() {
+        guard let player = player else { return }
+        let min = Int(player.currentTime) / 60
+        let sec = Int(player.currentTime) % 60
+        if sec < 10 {
+            musicTimeLabel.text = "\(min):0\(sec)"
+            
+        } else {
+            musicTimeLabel.text = "\(min):\(sec)"
+        }
+        
+    
+    }
+    
+    
+    
+    func setup() {
+        guard let player = player else { return }
+
+        trackSlider.maximumValue = Float(player.duration)
+
         pausePlayButton.setBackgroundImage(UIImage(named: "Pause"), for: .normal)
         
         self.view.backgroundColor = .gray
         
-        for subview in [trackLabel, artistLabel, albumImageVIew, slider, prevButton,
-                        pausePlayButton, nextButton] {
+        for subview in [trackLabel, artistLabel, albumImageVIew, volumeSlider, trackSlider, prevButton,
+                        pausePlayButton, nextButton, musicTimeLabel] {
             self.view.addSubview(subview)
         }
         
@@ -178,10 +248,22 @@ class PlayerViewController: UIViewController {
             $0.leading.equalToSuperview().inset(20)
         }
         
-        slider.snp.makeConstraints{
+        volumeSlider.snp.makeConstraints{
             $0.left.right.equalToSuperview().inset(20)
             $0.bottomMargin.equalToSuperview().inset(20)
             $0.height.equalTo(40)
+        }
+        
+        trackSlider.snp.makeConstraints{
+            $0.left.right.equalToSuperview().inset(20)
+            $0.top.equalTo(artistLabel.snp.bottom).offset(20)
+            $0.height.equalTo(40)
+        }
+        
+        musicTimeLabel.snp.makeConstraints{
+            $0.leading.equalToSuperview().inset(20)
+            $0.bottom.equalTo(trackSlider).inset(40)
+            $0.height.equalTo(15)
         }
         
         pausePlayButton.snp.makeConstraints{
@@ -201,11 +283,12 @@ class PlayerViewController: UIViewController {
             $0.centerY.equalTo(pausePlayButton)
         }
         
-        slider.addTarget(self, action: #selector(didSliderUsed(_:)), for: .valueChanged)
+        trackSlider.addTarget(self, action: #selector(didTrackSliderUsed(_:)), for: .valueChanged)
+        volumeSlider.addTarget(self, action: #selector(didVolumeSliderUsed(_:)), for: .valueChanged)
         prevButton.addTarget(self, action: #selector(didPrevButtonUsed), for: .touchUpInside)
         pausePlayButton.addTarget(self, action: #selector(didPausePlayButtonUsed), for: .touchUpInside)
         nextButton.addTarget(self, action: #selector(didNextButtonUsed), for: .touchUpInside)
-    
+        
     }
     
     

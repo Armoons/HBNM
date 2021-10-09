@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F05726FF0D0EA089529A1ED /* Pods_MusGal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001BED64D607C26DBFAD010 /* Pods_MusGal.framework */; };
 		AE33FA30270D99F800597382 /* ViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33FA2F270D99F800597382 /* ViewController+Ext.swift */; };
+		AE44254D2711AAD300300DA3 /* Thumb20.png in Resources */ = {isa = PBXBuildFile; fileRef = AE44254C2711AAD300300DA3 /* Thumb20.png */; };
 		AE804F6A270CD4A000DC2A1D /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE804F69270CD4A000DC2A1D /* ImageViewController.swift */; };
 		AE8FAED92707592000F9DF1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8FAED82707592000F9DF1D /* AppDelegate.swift */; };
 		AE8FAEDB2707592000F9DF1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8FAEDA2707592000F9DF1D /* SceneDelegate.swift */; };
@@ -61,6 +62,7 @@
 /* Begin PBXFileReference section */
 		3530CDC7364F69E4E36E6E1D /* Pods-MusGal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusGal.release.xcconfig"; path = "Target Support Files/Pods-MusGal/Pods-MusGal.release.xcconfig"; sourceTree = "<group>"; };
 		AE33FA2F270D99F800597382 /* ViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Ext.swift"; sourceTree = "<group>"; };
+		AE44254C2711AAD300300DA3 /* Thumb20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Thumb20.png; path = ../../../Downloads/Thumb20.png; sourceTree = "<group>"; };
 		AE804F69270CD4A000DC2A1D /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		AE8FAED52707592000F9DF1D /* MusGal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusGal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE8FAED82707592000F9DF1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				AEDD88EC270CC3D500BB0C0F /* Gallery */,
 				AE33FA2F270D99F800597382 /* ViewController+Ext.swift */,
 				AE8FAEE12707592200F9DF1D /* Assets.xcassets */,
+				AE44254C2711AAD300300DA3 /* Thumb20.png */,
 				AE8FAEE32707592200F9DF1D /* LaunchScreen.storyboard */,
 				AE8FAEE62707592200F9DF1D /* Info.plist */,
 				AEDD88D3270CA47B00BB0C0F /* Songs */,
@@ -365,6 +368,7 @@
 				AEDD88DD270CA47C00BB0C0F /* Imagine Dragons - Believer.mp3 in Resources */,
 				AEDD88E3270CA47C00BB0C0F /* Sleeping At Last - Earth.mp3 in Resources */,
 				AE8FAEE22707592200F9DF1D /* Assets.xcassets in Resources */,
+				AE44254D2711AAD300300DA3 /* Thumb20.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +624,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -650,6 +655,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
