@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 import SnapKit
 
-class PlayerViewController: UIViewController {
+class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
     
     public var position: Int = 0
     public var songs: [Song] = []
@@ -96,12 +96,12 @@ class PlayerViewController: UIViewController {
         _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateMusicTimeLabel), userInfo: nil, repeats: true)
 
         if self.view.subviews.count == 0{
-            configure()
+            configure(position: position)
             setup()
         }
     }
     
-    func configure(){
+    func configure(position: Int){
         
         let song  = songs[position]
         let path = Bundle.main.path(forResource: song.songName, ofType: "mp3")!
@@ -138,7 +138,7 @@ class PlayerViewController: UIViewController {
         let value = slider.value
         player?.volume = value
     }
-    
+
     @objc func didTrackSliderUsed( _ slider: UISlider) {
         guard let player = player else { return }
         
@@ -148,6 +148,8 @@ class PlayerViewController: UIViewController {
             player.prepareToPlay()
             player.play()
         }
+
+        
     }
     
     @objc func didPrevButtonUsed(){
@@ -157,7 +159,7 @@ class PlayerViewController: UIViewController {
             for subview in self.view.subviews {
                 subview.removeFromSuperview()
             }
-            configure()
+            configure(position: position)
         }
     }
     
@@ -185,18 +187,26 @@ class PlayerViewController: UIViewController {
             for subview in self.view.subviews {
                 subview.removeFromSuperview()
             }
-            configure()
+            configure(position: position)
         }
     }
     
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        //You can stop the audio
+        configure(position: position + 1)
+        position = position + 1
+        setup()
+    }
+    
+
+    
     @objc func updateSlider() {
         guard let player = player else { return }
-        
-        trackSlider.value = Float(player.currentTime)
+        self.trackSlider.value = Float(player.currentTime)
     }
     
 //    func nextTrack(position: Int) {
-//        configure(position: position)
+//        configure(position: position)x
 //    }
     
     @objc func updateMusicTimeLabel() {
@@ -216,8 +226,12 @@ class PlayerViewController: UIViewController {
     
     
     func setup() {
+        
+        
         guard let player = player else { return }
-
+        
+        player.delegate = self
+        
         trackSlider.maximumValue = Float(player.duration)
 
         pausePlayButton.setBackgroundImage(UIImage(named: "Pause"), for: .normal)
@@ -294,5 +308,12 @@ class PlayerViewController: UIViewController {
     
 }
 
+//extension PlayerViewController: AVAudioPlayerDelegate {
+//    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+//        if flag {
+//            print("Hello")
+//        }
+//    }
+//}
 
 

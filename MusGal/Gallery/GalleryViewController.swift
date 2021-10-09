@@ -32,6 +32,7 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = false
 
+
         self.navigationController?.navigationBar.isHidden = false
         self.navigationItem.hidesBackButton = true
         setup()
