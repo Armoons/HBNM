@@ -9,17 +9,16 @@ import UIKit
 
 class MusicViewController: UIViewController {
     
-    struct Cells {
-        static let cell = "CustomCell"
+    enum Cell: String {
+        case custom = "CustomCell"
     }
 
     var songs: [Song] = []
     
-
+    
     private let tableView: UITableView = {
-       let table = UITableView()
-//        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        table.register(UINib(nibName: Cells.cell, bundle: nil), forCellReuseIdentifier: Cells.cell)
+        let table = UITableView()
+        table.register(UINib(nibName: Cell.custom.rawValue, bundle: nil), forCellReuseIdentifier: Cell.custom.rawValue)
         return table
     }()
 
@@ -99,7 +98,7 @@ extension MusicViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.cell, for: indexPath) as! CustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.custom.rawValue, for: indexPath) as! CustomCell
 //        if cell == nil {
 //            cell = UITableViewCell(style: .value1, reuseIdentifier: "reuseIdentifier")
 //        }

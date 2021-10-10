@@ -20,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let mainVC = MainViewController()
 //        window?.rootViewController = mainVC
         
-        if #available(iOS 15.0, *) {
-                UITableView.appearance().sectionHeaderTopPadding = 0
-            }
+//        if #available(iOS 15.0, *) {
+//                UITableView.appearance().sectionHeaderTopPadding = 0
+//            }
 
         return true
     }

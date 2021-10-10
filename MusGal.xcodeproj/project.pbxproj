@@ -124,6 +124,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AE8A8DD82713530400A9FD6A /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				AE8FAF08270762FD00F9DF1D /* PlayerViewController.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
 		AE8FAECC2707592000F9DF1D = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +160,7 @@
 				AE8FAED82707592000F9DF1D /* AppDelegate.swift */,
 				AE8FAEDA2707592000F9DF1D /* SceneDelegate.swift */,
 				AE8FAEDC2707592000F9DF1D /* MainTabBarController.swift */,
+				AE8A8DD82713530400A9FD6A /* Player */,
 				AECDE43C2709CBD10068CE1F /* Music */,
 				AEDD88EC270CC3D500BB0C0F /* Gallery */,
 				AE33FA2F270D99F800597382 /* ViewController+Ext.swift */,
@@ -186,7 +195,6 @@
 				AEDD88E8270CA86B00BB0C0F /* CustomCell.swift */,
 				AEDD88E9270CA86B00BB0C0F /* CustomCell.xib */,
 				AEDD88C7270C9D7900BB0C0F /* MusicViewController.swift */,
-				AE8FAF08270762FD00F9DF1D /* PlayerViewController.swift */,
 			);
 			path = Music;
 			sourceTree = "<group>";

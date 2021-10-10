@@ -176,7 +176,9 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
             player?.play()
             UIView.animate(withDuration: 3) {
                 self.pausePlayButton.setBackgroundImage(UIImage(named: "Pause"), for: .normal)
-            }        }
+            }
+            
+        }
     }
     
     @objc func didNextButtonUsed(){
