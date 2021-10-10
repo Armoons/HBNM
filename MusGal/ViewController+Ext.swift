@@ -22,8 +22,6 @@ extension UIViewController {
         transition.duration = 0.3
         transition.type = .reveal
         transition.subtype = .fromLeft
-//        self.view.window?.layer.add(transition, forKey: kCATransition)
-//        self.parent.layer.add(transition, forKey: kCATransition)
         navigationController?.popViewController(animated: true)
     }
 }

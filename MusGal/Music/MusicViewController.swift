@@ -14,6 +14,7 @@ class MusicViewController: UIViewController {
     }
 
     var songs: [Song] = []
+    
 
     private let tableView: UITableView = {
        let table = UITableView()
@@ -28,10 +29,6 @@ class MusicViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        
-//        if #available(iOS 15.0, *) {
-//            UITableView.appearance().sectionHeaderTopPadding = 0
-//        }
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Music"
         configureSongs()
@@ -44,70 +41,60 @@ class MusicViewController: UIViewController {
         tableView.frame = view.bounds
     }
     
+    struct tracksName {
+        static let experience = "Angèle Dubeau, La Pietà-Experience"
+        static let oneDay = "Imagine Dragons-One Day"
+        static let chlorine = "Twenty One Pilots-Chlorine"
+        static let sweaterWeather  = "The Neighbourhood-Sweater Weather"
+        static let demons = "Imagine Dragons-Demons"
+        static let believer = "Imagine Dragons-Believer"
+        static let irresistible = "Fall Out Boy-Irresistible"
+        
+    }
+    
+    
     func configureSongs() {
-        songs.append(Song(trackName: "Experience",
-                          artistName: "Angèle Dubeau, La Pietà",
-                          imageName: "Experience",
-                          songName: "Angèle Dubeau, La Pietà - Experience"))
-        songs.append(Song(trackName: "One Day",
-                          artistName: "Imagine Dragons",
-                          imageName: "One Day",
-                          songName: "Imagine Dragons - One Day"))
-        songs.append(Song(trackName: "Sweater Weather",
-                          artistName: "The Neighbourhood",
-                          imageName: "Sweater Weather",
-                          songName: "The Neighbourhood - Sweater Weather"))
-        songs.append(Song(trackName: "Chlorine",
-                          artistName: "Twenty One Pilots",
-                          imageName: "Chlorine",
-                          songName: "Twenty One Pilots - Chlorine"))
-        songs.append(Song(trackName: "Dance for Me Wallis",
-                          artistName: "Abel Korzeniowski",
-                          imageName: "Dance for Me Wallis",
-                          songName: "Abel Korzeniowski - Dance For Me Wallis"))
-        songs.append(Song(trackName: "Demons",
-                          artistName: "Imagine Dragons",
-                          imageName: "Demons",
-                          songName: "Imagine Dragons - Demons"))
-        songs.append(Song(trackName: "Believer",
-                          artistName: "Imagine Dragons",
-                          imageName: "Believer",
-                          songName: "Imagine Dragons - Believer"))
-        songs.append(Song(trackName: "Irresistible",
-                          artistName: "Fall Out Boy",
-                          imageName: "Irresistible",
-                          songName: "Fall Out Boy - Irresistible"))
-        songs.append(Song(trackName: "Hideaway",
-                          artistName: "Dan Owen",
-                          imageName: "Hideaway",
-                          songName: "Dan Owen - Hideaway"))
-        songs.append(Song(trackName: "Crash",
-                          artistName: "Eden",
-                          imageName: "Crash",
-                          songName: "Eden - Crash"))
-        songs.append(Song(trackName: "All I Want",
-                          artistName: "Kodaline",
-                          imageName: "All I Want",
-                          songName: "Kodaline - All I Want"))
-        songs.append(Song(trackName: "Places",
-                          artistName: "Portair",
-                          imageName: "Places",
-                          songName: "Portair - Places"))
-        songs.append(Song(trackName: "Earth",
-                          artistName: "Sleeping At Last",
-                          imageName: "Earth",
-                          songName: "Sleeping At Last - Earth"))
-        songs.append(Song(trackName: "Where's My Love",
-                          artistName: "SYML",
-                          imageName: "Where's My Love",
-                          songName: "SYML - Where's My Love"))
+        
+        songs.append(Song(trackName: String(tracksName.experience.split(separator: "-")[1]),
+                          artistName: String(tracksName.experience.split(separator: "-")[0]),
+                          imageName: String(tracksName.experience.split(separator: "-")[1]),
+                          songName: tracksName.experience))
+        songs.append(Song(trackName: String(tracksName.oneDay.split(separator: "-")[1]),
+                          artistName: String(tracksName.oneDay.split(separator: "-")[0]),
+                          imageName: String(tracksName.oneDay.split(separator: "-")[1]),
+                          songName: tracksName.oneDay))
+        songs.append(Song(trackName: String(tracksName.chlorine.split(separator: "-")[1]),
+                          artistName: String(tracksName.chlorine.split(separator: "-")[0]),
+                          imageName: String(tracksName.chlorine.split(separator: "-")[1]),
+                          songName: tracksName.chlorine))
+        songs.append(Song(trackName: String(tracksName.sweaterWeather.split(separator: "-")[1]),
+                          artistName: String(tracksName.sweaterWeather.split(separator: "-")[0]),
+                          imageName: String(tracksName.sweaterWeather.split(separator: "-")[1]),
+                          songName: tracksName.sweaterWeather))
+        songs.append(Song(trackName: String(tracksName.demons.split(separator: "-")[1]),
+                          artistName: String(tracksName.demons.split(separator: "-")[0]),
+                          imageName: String(tracksName.demons.split(separator: "-")[1]),
+                          songName: tracksName.demons))
+        songs.append(Song(trackName: String(tracksName.believer.split(separator: "-")[1]),
+                          artistName: String(tracksName.believer.split(separator: "-")[0]),
+                          imageName: String(tracksName.believer.split(separator: "-")[1]),
+                          songName: tracksName.believer))
+        songs.append(Song(trackName: String(tracksName.irresistible.split(separator: "-")[1]),
+                          artistName: String(tracksName.irresistible.split(separator: "-")[0]),
+                          imageName: String(tracksName.irresistible.split(separator: "-")[1]),
+                          songName: tracksName.irresistible))
+        songs.append(Song(trackName: String(tracksName.demons.split(separator: "-")[1]),
+                          artistName: String(tracksName.demons.split(separator: "-")[0]),
+                          imageName: String(tracksName.demons.split(separator: "-")[1]),
+                          songName: tracksName.demons))
+
     }
 
 }
 
 extension MusicViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return songs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -138,7 +125,6 @@ extension MusicViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let position = indexPath.row
         let vc = PlayerViewController()
-//        guard let vc = storyboard?.instantiateViewController(withIdentifier: "player") as? PlayerViewController else { return }
         vc.position = position
         vc.songs = songs
         present(vc, animated: true)

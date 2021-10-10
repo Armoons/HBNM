@@ -164,7 +164,6 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     @objc func didPausePlayButtonUsed(){
-        //        guard let player = player else { return }
         if player?.isPlaying == true {
             player?.pause()
             
@@ -205,9 +204,7 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
         self.trackSlider.value = Float(player.currentTime)
     }
     
-//    func nextTrack(position: Int) {
-//        configure(position: position)x
-//    }
+
     
     @objc func updateMusicTimeLabel() {
         guard let player = player else { return }
@@ -308,12 +305,6 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
     
 }
 
-//extension PlayerViewController: AVAudioPlayerDelegate {
-//    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-//        if flag {
-//            print("Hello")
-//        }
-//    }
-//}
+
 
 
