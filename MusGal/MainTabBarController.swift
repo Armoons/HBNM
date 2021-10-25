@@ -64,7 +64,7 @@ class MainTabBarController: UITabBarController {
         guard let items = tabBar.items else { return }
         
         for i in items {
-            i.imageInsets = UIEdgeInsets(top: 4, left: 0, bottom: -4, right: 0)
+            i.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         }
     }
     
