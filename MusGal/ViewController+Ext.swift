@@ -13,7 +13,6 @@ extension UIViewController {
         let transition = CATransition()
         transition.duration = 0.0
         transition.type = .fade
-//        self.view.window?.layer.add(transition, forKey: kCATransition)
         navigationController?.pushViewController(viewController, animated: true)
     }
     

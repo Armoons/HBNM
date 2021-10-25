@@ -11,14 +11,11 @@ import SnapKit
 
 class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
     
-    public var position: Int = 0
-    public var songs: [Song] = []
-    
-    
+    var position: Int = 0
+    var songs: [Song] = []
+
     var player: AVAudioPlayer?
     
-    
-   
     private let volumeSlider = UISlider()
     private let trackSlider: UISlider = {
         let slider = UISlider()
@@ -78,7 +75,6 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
     private let nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .white
-        //        button.setImage(UIImage(named: "Конец"), for: .normal)
         button.setBackgroundImage(UIImage(named: "Next"), for: .normal)
         return button
     }()
@@ -107,7 +103,6 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
         let path = Bundle.main.path(forResource: song.songName, ofType: "mp3")!
         let url = URL(fileURLWithPath: path)
         
-        
         do {
             
             try AVAudioSession.sharedInstance().setMode(.default)
@@ -120,7 +115,6 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
             player.volume = 0.5
             player.play()
         }
-        
         catch {
             print("Error")
         }
@@ -128,10 +122,7 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
         trackLabel.text = song.trackName
         artistLabel.text = song.artistName
         albumImageVIew.image = UIImage(named: song.imageName)
-        
         volumeSlider.value = 0.5
-        
-        
     }
     
     @objc func didVolumeSliderUsed( _ slider: UISlider) {
@@ -148,8 +139,6 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
             player.prepareToPlay()
             player.play()
         }
-
-        
     }
     
     @objc func didPrevButtonUsed(){
@@ -198,16 +187,12 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
         position = position + 1
         setup()
     }
-    
 
-    
     @objc func updateSlider() {
         guard let player = player else { return }
         self.trackSlider.value = Float(player.currentTime)
     }
-    
-
-    
+ 
     @objc func updateMusicTimeLabel() {
         guard let player = player else { return }
         let min = Int(player.currentTime) / 60
@@ -218,25 +203,17 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
         } else {
             musicTimeLabel.text = "\(min):\(sec)"
         }
-        
-    
     }
-    
-    
-    
+
     func setup() {
         
-        
-        guard let player = player else { return }
-        
-        player.delegate = self
-        
-        trackSlider.maximumValue = Float(player.duration)
-
-        pausePlayButton.setBackgroundImage(UIImage(named: "Pause"), for: .normal)
-        
         self.view.backgroundColor = .gray
-        
+
+        guard let player = player else { return }
+        player.delegate = self
+        trackSlider.maximumValue = Float(player.duration)
+        pausePlayButton.setBackgroundImage(UIImage(named: "Pause"), for: .normal)
+    
         for subview in [trackLabel, artistLabel, albumImageVIew, volumeSlider, trackSlider, prevButton,
                         pausePlayButton, nextButton, musicTimeLabel] {
             self.view.addSubview(subview)
@@ -246,7 +223,6 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
             $0.height.equalTo(self.view.snp.width)
             $0.topMargin.equalToSuperview().inset(10)
             $0.right.left.equalToSuperview().inset(10)
-            
         }
         
         trackLabel.snp.makeConstraints{

@@ -13,8 +13,7 @@ class MusicViewController: UIViewController {
         case custom = "CustomCell"
     }
 
-    var songs: [Song] = []
-    
+    private var songs: [Song] = []
     
     private let tableView: UITableView = {
         let table = UITableView()
@@ -48,9 +47,7 @@ class MusicViewController: UIViewController {
         static let demons = "Imagine Dragons-Demons"
         static let believer = "Imagine Dragons-Believer"
         static let irresistible = "Fall Out Boy-Irresistible"
-        
     }
-    
     
     func configureSongs() {
         
@@ -88,7 +85,6 @@ class MusicViewController: UIViewController {
                           songName: tracksName.demons))
 
     }
-
 }
 
 extension MusicViewController: UITableViewDataSource, UITableViewDelegate {
@@ -97,18 +93,8 @@ extension MusicViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.custom.rawValue, for: indexPath) as! CustomCell
-//        if cell == nil {
-//            cell = UITableViewCell(style: .value1, reuseIdentifier: "reuseIdentifier")
-//        }
-        
-
         let song = songs[indexPath.row]
-//        cell.textLabel?.text = song.trackName
-//        cell.detailTextLabel?.text = song.artistName
-//        cell.imageView?.image = UIImage(named: song.imageName)
-        
         cell.trackLabel.text = song.trackName
         cell.artistLabel.text = song.artistName
         cell.albumImageView.image = UIImage(named: song.imageName)
@@ -127,7 +113,6 @@ extension MusicViewController: UITableViewDataSource, UITableViewDelegate {
         vc.position = position
         vc.songs = songs
         present(vc, animated: true)
-        
     }
 }
 
@@ -136,7 +121,6 @@ struct Song {
     let artistName: String
     let imageName: String
     let songName: String
-    
 }
 
 
