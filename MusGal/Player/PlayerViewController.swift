@@ -16,7 +16,7 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
 
     var player: AVAudioPlayer?
     
-    private let volumeSlider = UISlider()
+//    private let volumeSlider = UISlider()
     private let trackSlider: UISlider = {
         let slider = UISlider()
         slider.value = 0
@@ -122,13 +122,13 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
         trackLabel.text = song.trackName
         artistLabel.text = song.artistName
         albumImageVIew.image = UIImage(named: song.imageName)
-        volumeSlider.value = 0.5
+//        volumeSlider.value = 0.5
     }
     
-    @objc func didVolumeSliderUsed( _ slider: UISlider) {
-        let value = slider.value
-        player?.volume = value
-    }
+//    @objc func didVolumeSliderUsed( _ slider: UISlider) {
+//        let value = slider.value
+//        player?.volume = value
+//    }
 
     @objc func didTrackSliderUsed( _ slider: UISlider) {
         guard let player = player else { return }
@@ -214,7 +214,7 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
         trackSlider.maximumValue = Float(player.duration)
         pausePlayButton.setBackgroundImage(UIImage(named: "Pause"), for: .normal)
     
-        for subview in [trackLabel, artistLabel, albumImageVIew, volumeSlider, trackSlider, prevButton,
+        for subview in [trackLabel, artistLabel, albumImageVIew, trackSlider, prevButton,
                         pausePlayButton, nextButton, musicTimeLabel] {
             self.view.addSubview(subview)
         }
@@ -237,11 +237,11 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
             $0.leading.equalToSuperview().inset(20)
         }
         
-        volumeSlider.snp.makeConstraints{
-            $0.left.right.equalToSuperview().inset(20)
-            $0.bottomMargin.equalToSuperview().inset(20)
-            $0.height.equalTo(40)
-        }
+//        volumeSlider.snp.makeConstraints{
+//            $0.left.right.equalToSuperview().inset(20)
+//            $0.bottomMargin.equalToSuperview().inset(20)
+//            $0.height.equalTo(40)
+//        }
         
         trackSlider.snp.makeConstraints{
             $0.left.right.equalToSuperview().inset(20)
@@ -273,7 +273,7 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
         }
         
         trackSlider.addTarget(self, action: #selector(didTrackSliderUsed(_:)), for: .valueChanged)
-        volumeSlider.addTarget(self, action: #selector(didVolumeSliderUsed(_:)), for: .valueChanged)
+//        volumeSlider.addTarget(self, action: #selector(didVolumeSliderUsed(_:)), for: .valueChanged)
         prevButton.addTarget(self, action: #selector(didPrevButtonUsed), for: .touchUpInside)
         pausePlayButton.addTarget(self, action: #selector(didPausePlayButtonUsed), for: .touchUpInside)
         nextButton.addTarget(self, action: #selector(didNextButtonUsed), for: .touchUpInside)
